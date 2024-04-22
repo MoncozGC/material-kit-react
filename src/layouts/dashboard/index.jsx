@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 
 import Nav from './nav';
 import Main from './main';
-import Header from './header';
+// import Header from './header'; // 注释顶部按钮
 
 // ----------------------------------------------------------------------
 
@@ -13,10 +13,7 @@ export default function DashboardLayout({ children }) {
   const [openNav, setOpenNav] = useState(false);
 
   return (
-    <>
-      <Header onOpenNav={() => setOpenNav(true)} />
-
-      <Box
+         <Box
         sx={{
           minHeight: 1,
           display: 'flex',
@@ -27,7 +24,6 @@ export default function DashboardLayout({ children }) {
 
         <Main>{children}</Main>
       </Box>
-    </>
   );
 }
 

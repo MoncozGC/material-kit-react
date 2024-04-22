@@ -38,7 +38,7 @@ export default function UserTableHead({
         {headLabel.map((headCell) => (
           <TableCell
             key={headCell.id}
-            align={headCell.align || 'left'}
+            align={headCell.align || 'center'}
             sortDirection={orderBy === headCell.id ? order : false}
             sx={{ width: headCell.width, minWidth: headCell.minWidth }}
           >
@@ -66,7 +66,7 @@ UserTableHead.propTypes = {
   order: PropTypes.oneOf(['asc', 'desc']),
   orderBy: PropTypes.string,
   rowCount: PropTypes.number,
-  headLabel: PropTypes.array,
+  headLabel: PropTypes.array, // 表头名称
   numSelected: PropTypes.number,
   onRequestSort: PropTypes.func,
   onSelectAllClick: PropTypes.func,
